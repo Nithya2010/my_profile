@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithya A | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Nithya A</h1>
+    <p>BE Computer Science and Engineering Student</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="biodata.html">Biodata</a>
+</nav>
+
+<main>
+    <section class="box center">
+        <div class="content">
+            <h2>Welcome to My Portfolio</h2>
+            <h1>Hello, I'm Nithya!</h1>
+            <p>I am a Computer Science and Engineering student interested in programming, technology, and software development.</p>
+            <p>This website introduces my education, technical skills, projects, and personal details.</p>
+            <button onclick="showMessage()">Click Here</button>
+            <p id="message"></p>
+        </div>
+    </section>
+
+    <section class="box">
+        <h2>About Me</h2>
+        <div class="content">
+            <p>I am pursuing my Bachelor of Engineering in Computer Science and Engineering. I enjoy learning new technologies and improving my programming skills through practical projects.</p>
+        </div>
+    </section>
+
+    <section class="box">
+        <h2>My Highlights</h2>
+        <div class="three">
+            <div class="smallbox">
+                <h3>Education</h3>
+                <p>BE in Computer Science and Engineering</p>
+            </div>
+            <div class="smallbox">
+                <h3>Technical Skills</h3>
+                <p>C, C++, Java, Python, HTML, CSS and SQL</p>
+            </div>
+            <div class="smallbox">
+                <h3>Projects</h3>
+                <p>Classroom Seat Allotment System and other academic projects</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="box">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <div>
+                <h3>Contact Details</h3>
+                <p><strong>Name:</strong> Nithya A</p>
+                <p><strong>USN:</strong> 1RF24CS116</p>
+                <p><strong>Email:</strong> rvit24cs040.rvitm@rvei.edu.in</p>
+            </div>
+
+            <form onsubmit="sendMessage(event)">
+                <h3>Send a Message</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="userMessage" placeholder="Write your message" required></textarea>
+                <button type="submit">Submit</button>
+                <p id="formMessage"></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Nithya A | My Portfolio</p>
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("message").textContent =
+        "Thank you for visiting my portfolio!";
+}
+
+function sendMessage(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    document.getElementById("formMessage").textContent =
+        "Thank you, " + name + "! Your message has been recorded on this page.";
+
+    event.target.reset();
+}
+</script>
+
+</body>
+</html>
